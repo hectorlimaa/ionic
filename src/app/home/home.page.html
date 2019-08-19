@@ -1,0 +1,28 @@
+<ion-header >
+    <ion-title>Contatos</ion-title>
+</ion-header>
+
+<ion-content >
+  
+  <ion-list >
+    <h2 align="center">contatos</h2>
+    <ion-item *ngFor="let clientes of clientes" (click)="selecionarCliente(clientes)" >
+
+        <ion-avatar slot="start">
+          <img class="logo1" src={{clientes.imagem}}>
+        </ion-avatar>  
+        <ion-label class="texto1">  
+            <b>{{clientes.nome}}</b> <br>
+            <i>Telefone:{{clientes.telefone}} </i> <br>
+            <i>Id: {{clientes.id}}</i><br>
+            <i>Endereço: {{clientes.endereco}}</i>
+        </ion-label>  
+        
+    </ion-item>
+   
+    <ion-button expand="block" fill="outline" (click)="cliqueSobre(clientes)">Sobre</ion-button>
+  </ion-list>
+
+
+  
+  </ion-content>
